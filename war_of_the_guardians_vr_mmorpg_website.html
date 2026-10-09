@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War of the Guardians | VR Medieval Dark Fantasy MMORPG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#090a0f',
+                        cardBg: '#121520',
+                        accentGold: '#d4af37',
+                        accentHover: '#e5c158',
+                        mutedText: '#94a3b8'
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #090a0f;
+            color: #e2e8f0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, h4, .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+        .hero-glow {
+            background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.12) 0%, rgba(9, 10, 15, 0.95) 75%);
+        }
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .gold-glow:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-100 min-h-screen flex flex-col selection:bg-accentGold selection:text-black">
+
+    <header class="sticky top-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-amber-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full border border-accentGold/60 flex items-center justify-center bg-cardBg group-hover:border-accentGold transition-colors">
+                    <i class="fa-solid fa-shield-halved text-accentGold text-lg"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-cinzel font-bold tracking-wider text-lg text-amber-100">WAR OF THE GUARDIANS</span>
+                    <span class="text-[10px] tracking-widest text-accentGold uppercase">VR MMORPG</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#home" class="text-slate-300 hover:text-accentGold transition-colors">Home</a>
+                <a href="#about" class="text-slate-300 hover:text-accentGold transition-colors">About</a>
+                <a href="#media" class="text-slate-300 hover:text-accentGold transition-colors">Media</a>
+                <a href="#privacy" class="text-slate-300 hover:text-accentGold transition-colors">Privacy Policy</a>
+                <a href="#terms" class="text-slate-300 hover:text-accentGold transition-colors">Terms</a>
+                <a href="#support" class="text-slate-300 hover:text-accentGold transition-colors">Support</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#home" class="px-5 py-2.5 rounded-md bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-black font-semibold font-cinzel text-xs tracking-widest uppercase transition-all shadow-lg gold-glow">
+                    Play Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-accentGold focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-amber-900/30 px-6 py-4 space-y-3">
+            <a href="#home" class="block text-slate-300 hover:text-accentGold py-1">Home</a>
+            <a href="#about" class="block text-slate-300 hover:text-accentGold py-1">About</a>
+            <a href="#media" class="block text-slate-300 hover:text-accentGold py-1">Media</a>
+            <a href="#privacy" class="block text-slate-300 hover:text-accentGold py-1">Privacy Policy</a>
+            <a href="#terms" class="block text-slate-300 hover:text-accentGold py-1">Terms of Service</a>
+            <a href="#support" class="block text-slate-300 hover:text-accentGold py-1">Support</a>
+            <div class="pt-2">
+                <a href="#home" class="block text-center w-full py-2.5 rounded bg-amber-600 text-black font-semibold font-cinzel text-xs uppercase">Play Now</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="home" class="relative min-h-[90vh] flex items-center justify-center hero-glow px-4 py-20 overflow-hidden">
+            <!-- Background Atmospheric Overlay -->
+            <div class="absolute inset-0 z-0 opacity-40 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-darkBg/60 to-transparent z-0"></div>
+
+            <div class="relative z-10 max-w-5xl mx-auto text-center space-y-8">
+                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-accentGold/40 bg-amber-950/30 text-accentGold text-xs uppercase tracking-widest font-cinzel">
+                    <i class="fa-solid fa-vr-cardboard"></i>
+                    <span>Cross-Platform VR MMORPG Experience</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-black font-cinzel tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-amber-100 to-amber-500">
+                    War of the Guardians
+                </h1>
+
+                <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+                    Step into an unforgiving medieval dark fantasy realm. Master immersive melee combat, conquer treacherous dungeons, and forge your legacy across platforms.
+                </p>
+
+                <!-- Platform Badges -->
+                <div class="flex flex-wrap justify-center gap-4 pt-2">
+                    <div class="flex items-center space-x-2 px-4 py-2 rounded-lg bg-cardBg border border-slate-800 text-slate-300 text-sm">
+                        <i class="fa-solid fa-headset text-accentGold"></i>
+                        <span>Meta Quest Store</span>
+                    </div>
+                    <div class="flex items-center space-x-2 px-4 py-2 rounded-lg bg-cardBg border border-slate-800 text-slate-300 text-sm">
+                        <i class="fa-brands fa-steam text-accentGold"></i>
+                        <span>SteamVR</span>
+                    </div>
+                    <div class="flex items-center space-x-2 px-4 py-2 rounded-lg bg-cardBg border border-slate-800 text-slate-300 text-sm">
+                        <i class="fa-solid fa-glasses text-accentGold"></i>
+                        <span>Apple Vision Pro</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <a href="#media" class="w-full sm:w-auto px-8 py-3.5 rounded-md bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-black font-bold font-cinzel tracking-wider uppercase transition-all shadow-xl gold-glow">
+                        Explore Gallery
+                    </a>
+                    <a href="#about" class="w-full sm:w-auto px-8 py-3.5 rounded-md bg-cardBg border border-accentGold/50 hover:border-accentGold text-amber-200 font-bold font-cinzel tracking-wider uppercase transition-all">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center space-y-4 mb-16">
+                <span class="text-accentGold text-xs uppercase tracking-widest font-cinzel">Immersive Gameplay Features</span>
+                <h2 class="text-3xl sm:text-5xl font-cinzel font-bold text-amber-100">Forge Your Destiny</h2>
+                <div class="w-24 h-0.5 bg-accentGold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-cardBg p-8 rounded-xl border border-amber-900/20 hover:border-accentGold/40 transition-all group">
+                    <div class="w-14 h-14 rounded-lg bg-amber-950/40 border border-accentGold/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield text-accentGold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-cinzel font-bold text-amber-100 mb-3">Alive Open World</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Safetowns keep you free from the hordes of mobs that gather in their exterirors.Trade crafted gear, form guilds, and plan raids with players from Meta Quest, SteamVR, and Apple Vision Pro in seamless cross-play.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-cardBg p-8 rounded-xl border border-amber-900/20 hover:border-accentGold/40 transition-all group">
+                    <div class="w-14 h-14 rounded-lg bg-amber-950/40 border border-accentGold/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-skull text-accentGold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-cinzel font-bold text-amber-100 mb-3">Mob Grinding & Raids</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Venture into shadowy forests, treacherous mountain passes, and haunted cathedrals. Engage in intense real-time combat against hordes of dark fantasy creatures and legendary bosses.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-cardBg p-8 rounded-xl border border-amber-900/20 hover:border-accentGold/40 transition-all group">
+                    <div class="w-14 h-14 rounded-lg bg-amber-950/40 border border-accentGold/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-hand-fist text-accentGold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-cinzel font-bold text-amber-100 mb-3"> VR Mechanics</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Zero gravity God View with a Point and shoot system from the controller gives you full control in a gameplay style like no other.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-cardBg p-8 rounded-xl border border-amber-900/20 hover:border-accentGold/40 transition-all group">
+                    <div class="w-14 h-14 rounded-lg bg-amber-950/40 border border-accentGold/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-user-shield text-accentGold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-cinzel font-bold text-amber-100 mb-3">3 Gameplay styles</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Mighty Warrior, Archer, Conjurer Wizard.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-cardBg p-8 rounded-xl border border-amber-900/20 hover:border-accentGold/40 transition-all group">
+                    <div class="w-14 h-14 rounded-lg bg-amber-950/40 border border-accentGold/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-globe text-accentGold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-cinzel font-bold text-amber-100 mb-3">Cross-Platform MMO</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Powered by advanced networking architecture. Play seamlessly with your friends regardless of whether they are on standalone headset VR or high-end PCVR setups.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-cardBg p-8 rounded-xl border border-amber-900/20 hover:border-accentGold/40 transition-all group">
+                    <div class="w-14 h-14 rounded-lg bg-amber-950/40 border border-accentGold/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-scroll text-accentGold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-cinzel font-bold text-amber-100 mb-3">Dynamic Economy</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Player-driven marketplace where rare materials gathered from dark wilds can be traded, crafted into legendary equipment, and sold to fellow adventurers.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="media" class="py-24 bg-cardBg/50 border-y border-amber-900/20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center space-y-4 mb-16">
+                    <span class="text-accentGold text-xs uppercase tracking-widest font-cinzel">Visual Chronicles</span>
+                    <h2 class="text-3xl sm:text-5xl font-cinzel font-bold text-amber-100">Media Gallery</h2>
+                    <p class="text-slate-400 max-w-xl mx-auto text-sm">Glimpse into the dark fantasy atmosphere, ancient, and rugged wilderness of War of the Guardians. Click any image to view in full resolution.</p>
+                    <div class="w-24 h-0.5 bg-accentGold mx-auto"></div>
+                </div>
+
+                
+        </section>
+
+        <section id="privacy" class="py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <div class="bg-cardBg p-8 sm:p-12 rounded-2xl border border-amber-900/30 space-y-8 shadow-xl">
+                <div class="border-b border-amber-900/30 pb-6">
+                    <span class="text-accentGold text-xs uppercase tracking-widest font-cinzel">Legal Document</span>
+                    <h2 class="text-3xl font-cinzel font-bold text-amber-100 mt-2">Privacy Policy</h2>
+                    <p class="text-slate-400 text-xs mt-1">Last Updated: October 8, 2026 | Compliant with Meta Quest, SteamVR, and Apple Vision Pro Standards</p>
+                </div>
+
+                <div class="space-y-6 text-slate-300 text-sm leading-relaxed">
+                    <div>
+                        <h3 class="text-lg font-cinzel font-bold text-amber-200 mb-2">1. Introduction</h3>
+                        <p>Welcome to <strong>War of the Guardians</strong> ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data in compliance with applicable store requirements (Meta, Valve/Steam, and Apple). This Privacy Policy explains how we collect, use, and safeguard your information when you play our VR MMORPG across all supported virtual reality platforms.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-cinzel font-bold text-amber-200 mb-2">2. Information We Collect</h3>
+                        <p class="mb-2">To provide an optimal cross-platform multiplayer experience, we may collect the following categories of data:</p>
+                        <ul class="list-disc pl-5 space-y-1.5 text-slate-400">
+                            <li><strong>Account Identifiers:</strong> Platform-specific user IDs (Meta Horizon ID, Steam ID, Apple ID) used for authentication and multiplayer matchmaking.</li>
+                            <li><strong>VR Telemetry & Motion Data:</strong> Anonymized headset and controller tracking data strictly necessary for avatar positioning, combat synchronization, and locomotion calibration.</li>
+                            <li><strong>In-Game Activity & Progress:</strong> Character stats, inventory items, quest progression, guild memberships, and in-game chat logs.</li>
+                            <li><strong>Technical & Diagnostic Data:</strong> Crash reports, frame rate metrics, and hardware configuration to diagnose bugs and improve game performance.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-cinzel font-bold text-amber-200 mb-2">3. How We Use Your Information</h3>
+                        <p>We utilize the collected data solely to:</p>
+                        <ul class="list-disc pl-5 space-y-1.5 text-slate-400">
+                            <li>Facilitate cross-platform multiplayer gameplay and matchmaking.</li>
+                            <li>Maintain server security, prevent cheating, and enforce our Terms of Service.</li>
+                            <li>Save your character progression and virtual assets across devices.</li>
+                            <li>Provide technical support and respond to player inquiries.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-cinzel font-bold text-amber-200 mb-2">4. Data Sharing & Third Parties</h3>
+                        <p>We do not sell your personal data. Data is shared with platform providers (Meta, Valve, Apple) only to the extent required to authenticate your login, process authorized in-game purchases, and enable cross-play infrastructure.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-cinzel font-bold text-amber-200 mb-2">5. Data Retention & Your Rights</h3>
+                        <p>You may request the deletion of your account and associated game data at any time by contacting our support team. Upon verification, your account data will be permanently purged within 30 days, subject to legal retention obligations.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-cinzel font-bold text-amber-200 mb-2">6. Contact Us</h3>
+                        <p>If you have any questions regarding this Privacy Policy, please contact our Data Protection Officer at: <strong class="text-accentGold">soundinvolumes@gmail.com</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="terms" class="py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <div class="bg-cardBg p-8 sm:p-12 rounded-2xl border border-amber-900/30 space-y-8 shadow-xl">
+                <div class="border-b border-amber-900/30 pb-6">
+                    <span class="text-accentGold text-xs uppercase tracking-widest font-cinzel">Legal Document</span>
+                    <h2 class="text-3xl font-cinzel font-bold text-amber-100 mt-2">Terms of Service & EULA</h2>
+                    <p class="text-slate-400 text-xs mt-1">Last Updated: October 8, 2026</p>
+                </div>
+
+                <div class="space-y-6 text-slate-300 text-sm leading-relaxed">
+                    <div>
+                        <h3 class="text-lg font-cinzel font-bold text-amber-200 mb-2">1. Agreement to Terms</h3>
+                        <p>By downloading, installing, or playing <strong>War of the Guardians</strong>, you agree to be bound by these Terms of Service and End User License Agreement (EULA). If you do not agree to these terms, do not install or play the game.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-cinzel font-bold text-amber-200 mb-2">2. License Grant</h3>
+                        <p>Subject to your compliance with these Terms, we grant you a personal, non-exclusive, non-transferable, revocable license to install and use War of the Guardians on compatible VR hardware (Meta Quest, SteamVR, Apple Vision Pro) for personal, non-commercial entertainment.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-cinzel font-bold text-amber-200 mb-2">3. Player Conduct & Safe Zones</h3>
+                        <p>War of the Guardians is designed for an immersive community experience. Harassment, hate speech, exploiting glitches, cheating, or using unauthorized third-party mods in multiplayer sessions will result in immediate account suspension or permanent ban across all platforms.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-cinzel font-bold text-amber-200 mb-2">4. Virtual Goods & Store Purchases</h3>
+                        <p>All virtual currency, cosmetic items, and gear packs acquired in-game remain our intellectual property and are licensed to you under a limited right of use. Transactions are governed by the respective store's refund policies (Meta Store, Steam, Apple App Store).</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-cinzel font-bold text-amber-200 mb-2">5. Limitation of Liability</h3>
+                        <p>The game is provided "as is" without warranties of any kind. We shall not be liable for any indirect, incidental, or consequential damages arising from your use of virtual reality hardware or software.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="support" class="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <div class="bg-cardBg p-8 sm:p-12 rounded-2xl border border-amber-900/30 text-center space-y-6 shadow-xl">
+                <span class="text-accentGold text-xs uppercase tracking-widest font-cinzel">Customer Assistance</span>
+                <h2 class="text-3xl font-cinzel font-bold text-amber-100">Need Assistance?</h2>
+                <p class="text-slate-400 max-w-lg mx-auto text-sm">Experiencing bugs, account issues, or connection errors in VR? Our support guild is ready to assist you.</p>
+                <div class="pt-4">
+                    <a href="mailto:soundinvolumess@gmail.com" class="inline-flex items-center space-x-3 px-8 py-3.5 rounded-md bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-black font-bold font-cinzel tracking-wider uppercase transition-all shadow-xl gold-glow">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Contact Support</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4" onclick="closeLightbox()">
+        <div class="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-accentGold text-3xl focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightbox-img" src="" alt="Enlarged view" class="max-h-[80vh] w-auto object-contain rounded-lg border border-accentGold/30">
+            <p id="lightbox-caption" class="text-accentGold font-cinzel text-lg mt-4"></p>
+        </div>
+    </div>
+
+    <footer class="bg-cardBg border-t border-amber-900/30 py-12 px-4 sm:px-6 lg:px-8 mt-20">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div class="space-y-4 md:col-span-2">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-full border border-accentGold/60 flex items-center justify-center bg-darkBg">
+                        <i class="fa-solid fa-shield-halved text-accentGold text-sm"></i>
+                    </div>
+                    <span class="font-cinzel font-bold text-amber-100 tracking-wider">WAR OF THE GUARDIANS</span>
+                </div>
+                <p class="text-slate-400 text-sm max-w-md leading-relaxed">
+                    An epic medieval dark fantasy MMORPG built specifically for virtual reality. Experience uncompromised cross-play across Meta Quest, SteamVR, and Apple Vision Pro.
+                </p>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="font-cinzel font-bold text-accentGold text-sm uppercase tracking-wider">Quick Links</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="#home" class="hover:text-accentGold transition-colors">Home</a></li>
+                    <li><a href="#about" class="hover:text-accentGold transition-colors">About Features</a></li>
+                    <li><a href="#media" class="hover:text-accentGold transition-colors">Media Gallery</a></li>
+                    <li><a href="#support" class="hover:text-accentGold transition-colors">Support Center</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="font-cinzel font-bold text-accentGold text-sm uppercase tracking-wider">Legal & Compliance</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="#privacy" class="hover:text-accentGold transition-colors">Privacy Policy</a></li>
+                    <li><a href="#terms" class="hover:text-accentGold transition-colors">Terms of Service / EULA</a></li>
+                    <li><a href="#privacy" class="hover:text-accentGold transition-colors">Store Compliance</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-amber-900/20 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+            <p>&copy; 2026 War of the Guardians Studio. All rights reserved. Meta Quest, SteamVR, and Apple Vision Pro are trademarks of their respective owners.</p>
+            <div class="flex space-x-6 mt-4 sm:mt-0">
+                <a href="#privacy" class="hover:text-accentGold transition-colors">Privacy</a>
+                <a href="#terms" class="hover:text-accentGold transition-colors">Terms</a>
+                <a href="#support" class="hover:text-accentGold transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Lightbox Functions
+        function openLightbox(src, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+            
+            img.src = src;
+            cap.textContent = caption;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('flex');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
